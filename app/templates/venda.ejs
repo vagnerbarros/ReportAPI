@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= titulo %></title>
+</head>
+
+<body>
+    <main>
+        <% if (vendas.length > 0) { %>
+            <div class="grid">
+                <% for (let venda of vendas) { %>
+                    <article>
+                        <header>
+                            <h1><%= venda.numero %></h1>
+                        </header>
+                        <div>
+                            <h2><%= venda.cliente.nome %></h2>
+                        </div>
+                        <div>
+                            <h2><%= venda.valor %></h2>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>Nenhuma Venda Encontrada</h1>
+        <% } %>
+    </main>
+</body>
+
+</html>
